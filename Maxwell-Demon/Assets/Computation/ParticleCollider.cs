@@ -19,10 +19,10 @@ public class ParticleCollider : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D col)
     {
         int npart;
-        npart = System.Convert.ToInt32(other.name);
+        npart = System.Convert.ToInt32(col.name);
         if(this.tag == "side")
         {
             script.v0[npart, 0] = -1 * script.v0[npart, 0];
